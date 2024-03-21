@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Contact Us</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../CSS/contactus.css" rel="stylesheet">
+    <link rel="stylesheet" type="" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/dcb9efbc7e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.css"
+        integrity="sha512-+1GzNJIJQ0SwHimHEEDQ0jbyQuglxEdmQmKsu8KI7QkMPAnyDrL9TAnVyLPEttcTxlnLVzaQgxv2FpLCLtli0A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.cdnfonts.com/css/games" rel="stylesheet">
+</head>
+
+<body>
+    <form action="../../php/contactus.php" class="contact_form" onclick="SendClick();" method="post" target="iframecontact">
+        <div class="contactUs-container">
+            <h2>Contact Us</h2>
+            
+                <div class="row100">
+                    <div class="col100">
+                        <div class="fill-box">
+                            <input type="text" id="fn" name="fn">
+                            <span class="text">First Name</span>
+                            <span class="line"></span>
+                        </div>
+                    </div>
+
+                    <div class="col100">
+                        <div class="fill-box">
+                            <input type="text" id="ln" name="ln">
+                            <span class="text">Last Name</span>
+                            <span class="line"></span>
+                        </div>
+                    </div>
+
+                    <div class="col100">
+                        <div class="fill-box">
+                            <input type="text" id="email" name="email">
+                            <span class="text">Email</span>
+                            <span class="line"></span>
+                        </div>
+                    </div>
+
+                    <div class="col100">
+                        <div class="fill-box">
+                            <input type="text" required name="phone">
+                            <span class="text">Phone Number</span>
+                            <span class="line"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row100">
+                    <div class="col100">
+                        <div class="fill-box textarea">
+                            <input type="text" required name="text">
+                            <span class="text">Type your message Here.....</span>
+                            <span class="line"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row100">
+                    <div class="col100">
+                        <input type="submit" value="Send" name="contact-btn">
+                    </div>
+                </div>
+                <iframe name="iframecontact" class="framecontact"></iframe>
+            
+            
+        </div>
+        <div class="contact-info">
+            <h3>Contact Info</h3>
+            <div class="infoBox">
+                <div>
+                    <span><ion-icon name="location-outline"></ion-icon></span>
+                    <p>Diamond Campus, Yangon
+                        <br>Myanmar
+                    </p>
+                </div>
+
+                <div>
+                    <span><ion-icon name="mail-outline"></ion-icon></span>
+                    <a href="#">phoneixspace@gmail.com</a>
+                </div>
+
+                <div>
+                    <span><ion-icon name="call-outline"></ion-icon></span>
+                    <a href="#">09 769 200 024</a>
+                </div>
+
+                <ul class="sci">
+                    <li><a href="#"><i class="fa fa-facebook-f"></i></a> </li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a> </li>
+                    <li><a href="#"> <i class="fa fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </form>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        function SendClick(){
+            var fn = document.getElementById("")
+        }
+    </script>
+
+</body>
+
+</html>

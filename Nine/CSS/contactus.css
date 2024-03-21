@@ -1,0 +1,273 @@
+@import url('');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('../Image/bg.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+form {
+    width: fit-content;
+    margin: auto;
+}
+
+.contactUs-container {
+    width: 500px;
+    position: relative;
+    padding: 50px;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 25px 45px rgba(255, 255, 255, 0.1);
+    border: 2px solid #45f3ff;
+
+}
+
+.contact-info {
+    border: 2px solid red;
+    width: fit-content;
+    padding: 20px;
+    margin-left: 5px;
+    height: fit-content;
+    margin-top: 150px;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 25px 45px rgba(255, 255, 255, 0.1);
+}
+.contact_form{
+    display: flex;
+}
+.contact-info h3 {
+    width: 100%;
+    color: #45f3ff;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    color: #fff;
+}
+.infoBox{
+    margin: auto;
+}
+.contact-info .infoBox div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contact-info .infoBox div span {
+    min-width: 40px;
+    height: 40px;
+    color: #45f3ff;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.contact-info .infoBox div a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.sci {
+    margin-top: 40px;
+    display: block;
+    text-align: center;
+    margin: auto;
+    width: fit-content;
+}
+.sci li {
+    list-style: none;
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+.sci li a {
+    color: #45f3ff;
+    font-size: 1.5em;
+}
+
+.sci li a:hover {
+    color: #fff;
+}
+
+.contactUs-container h2 {
+    width: 100%;
+    color: #45f3ff;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.contactUs-container .row100 {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.contactUs-container .row100 .col100 {
+    position: relative;
+    width: 100%;
+    padding: 0 10px;
+    margin: 30px 0 10px;
+    transition: 0.5s;
+}
+
+.contactUs-container .row100 .fill-box {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    color: #45f3ff;
+}
+
+.contactUs-container .row100 .fill-box input,
+.contactUs-container .row100 .fill-box textarea {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    font-size: 18px;
+    padding: 0 10px;
+    z-index: 1;
+    color: #000;
+}
+
+.contactUs-container .row100 .fill-box .text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0 10px;
+    display: block;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.contactUs-container .row100 .fill-box input:focus+.text,
+.contactUs-container .row100 .fill-box input:valid+.text {
+    top: -35px;
+    left: -10px;
+}
+
+.contactUs-container .row100 .fill-box .line {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #45f3ff;
+    transition: 0.5s;
+    border-radius: 2px;
+    pointer-events: none;
+}
+
+.contactUs-container .row100 .fill-box input:focus~.line,
+.contactUs-container .row100 .fill-box input:valid~.line {
+    height: 100%;
+}
+
+.contactUs-container .row100 .fill-box .textarea {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding: 10px 0;
+}
+
+.contactUs-container .row100 .fill-box .textarea textarea {
+    height: 100%;
+    resize: none;
+}
+
+.contactUs-container .row100 .fill-box textarea:focus+.text,
+.contactUs-container .row100 .fill-box textarea:valid+.text {
+    top: -35px;
+    left: -10px;
+}
+
+.contactUs-container .row100 .fill-box textarea:focus~.line,
+.contactUs-container .row100 .fill-box textarea:valid~.line {
+    height: 100%;
+}
+
+input[type="submit"] {
+    border: none;
+    padding: 7px 35px;
+    cursor: pointer;
+    outline: none;
+    background: #45f3ff;
+    color: #000;
+    font-weight: 500;
+    border-radius: 2px;
+    font-size: 18px;
+}
+
+@media(max-width:800px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        width: 100%;
+        background-image: url(../../media/index/mobilebg.jpg);
+        background-repeat: no-repeat;
+    }
+   
+    .contactUs-container {
+        width: fit-content;
+        
+        padding: 10px;
+        z-index: 100;
+        margin: auto;
+        background: rgba(0, 0, 0, 0.5);
+        box-shadow: 0 25px 45px rgba(255, 255, 255, 0.1);
+        border: 2px solid #45f3ff;
+
+    }
+    .contact_form{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-info {
+        border: 2px solid red;
+        width: fit-content;
+        margin: auto;
+        padding: 20px;
+        z-index: 10000;
+        background: rgba(0, 0, 0, 0.8);
+        box-shadow: 0 25px 45px rgba(255, 255, 255, 0.1);
+    }
+
+}
+
+.framecontact{
+    width: 80%;
+    margin: auto;
+    display: block;
+    height: 30px;
+    outline: none;
+    border: none;
+  }

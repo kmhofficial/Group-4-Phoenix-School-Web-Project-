@@ -1,0 +1,884 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background: #000;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+    transition: 0.6s;
+}
+
+.logo {
+    background: linear-gradient(90deg, #ff0000, #ffff00, #ff00f3, #0033ff, #ff00c4, #ff0000);
+    background-size: 400%;
+    letter-spacing: 0.2em;
+    font-size: 40px;
+    font-weight: 600;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: animatelogo 10s linear infinite;
+}
+
+@keyframes animatelogo {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 400%;
+    }
+}
+
+header.sticky {
+    padding: 20px 40px;
+    background: #fff;
+}
+
+header.sticky .logo,
+header.sticky ul li a {
+    color: blue;
+}
+
+.group {
+    display: flex;
+    align-items: center;
+}
+
+header ul {
+    position: relative;
+    gap: 30px;
+    display: flex;
+}
+
+header ul li {
+
+    list-style: none;
+}
+
+header ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 0.2em;
+    font-weight: 500;
+    font-size: 1.5em;
+    transition: 0.6s;
+}
+
+header ul li a:hover {
+    color: #2e2e;
+}
+
+header ul li a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    bottom: -2px;
+    height: 2px;
+    background: #333;
+    transform: scaleX(0);
+    transition: transform 0.5s ease-in-out;
+    transform-origin: right;
+}
+
+header ul li a:hover:before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+header .search {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.searchBox {
+    position: absolute;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: #fff;
+    align-items: center;
+    padding: 0 30px;
+    transition: 0.5s ease-in-out;
+}
+
+.searchBox.active {
+    right: 0;
+}
+
+.searchBox input {
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 50px;
+    color: #333;
+    font-size: 1.25em;
+    background: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.searchBtn {
+    position: relative;
+    left: 30px;
+    top: 0px;
+    transition: 0.5s ease-in-out;
+    color: #2e2e;
+    font-size: 1.1em;
+}
+
+.searchBtn.active {
+    left: 0;
+}
+
+.closeBtn {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    scale: 0;
+    color: #2e2e;
+    font-size: 1.1em;
+}
+
+.closeBtn.active {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s;
+    scale: 1;
+}
+
+.menuToggle {
+    position: relative;
+    display: none;
+    color: #2e2e;
+}
+
+.head-text {
+    position: absolute;
+    width: 100%;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    background: rgba(34, 238, 34, 0.432);
+    text-align: center;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 400px;
+}
+
+.about-phx {
+    width: 100%;
+    background: #000;
+    text-align: center;
+    padding: 50px;
+}
+
+.about-phx h1 {
+    font-size: 50px;
+    font-weight: 900;
+    color: #2e2e;
+    text-transform: uppercase;
+}
+
+.about-phx h3 {
+    padding-top: 10px;
+    font-size: 20px;
+    color: #fff;
+    line-height: 20px;
+}
+
+.about-phx p {
+    padding-top: 20px;
+    font-size: 18px;
+    color: #666;
+    line-height: 20px;
+}
+
+.razer-about {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.razer-about img {
+    width: 100%;
+}
+
+.razer-about-text {
+    font-size: 23px;
+    color: #666;
+    line-height: 20px;
+    text-align: justify;
+    border: 1px dotted #2e2e;
+    padding: 20px;
+}
+
+.razer-about-text p {
+    line-height: 20px;
+}
+
+hr {
+    border: 1px dotted#2e2e;
+}
+
+.msi-about {
+    position: relative;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.msi-about img {
+    width: 100%;
+}
+
+.msi-ab-buy {
+    position: absolute;
+    top: 33%;
+    left: 15%;
+    text-decoration: none;
+    background: #2e2e;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 15px;
+}
+
+.msi-ab-buy:hover {
+    color: #fff;
+    background: #000;
+}
+
+.acc-head {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 0;
+    background: linear-gradient(to top, #000, rgb(29, 29, 29));
+}
+
+.accolades {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 30px;
+}
+
+.acc-head h1 {
+    color: #2e2e;
+    font-size: 50px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.acc1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.acc1 .acc1-img {
+    width: 500px;
+}
+
+.acc1 .acc1-img img {
+    width: 100%;
+}
+
+.acc1-text {
+    color: #8b8b8b;
+    width: 500px;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.acc1-text h3 {
+    color: #fff;
+    font-size: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.acc1-ex {
+    width: fit-content;
+}
+
+.acc1-ex a {
+    text-decoration: none;
+    color: #2e2e;
+    text-align: left;
+    font-size: 20px;
+}
+
+.team {
+    background: #000;
+    width: 100%;
+    border: 2px dotted #2e2e;
+}
+
+.team h1 {
+    font-family: 'Allura', cursive;
+    font-size: 52px;
+    margin-bottom: 80px;
+    text-align: center;
+    color: #fff;
+}
+
+.team-member {
+    display: flex;
+    text-align: justify;
+    width: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.team-member .member {
+    background: #000;
+    margin: 5px;
+    margin-bottom: 50px;
+    width: 300px;
+    padding: 20px;
+    line-height: 20px;
+    color: #8b8b8b;
+    position: relative;
+    box-shadow: 1px 2px 1px #fff;
+    border-top: 4px dotted blue;
+}
+
+.team-member .member h3 {
+    color: #fff;
+    font-size: 26px;
+    margin-top: 50px;
+    padding-bottom: 10px;
+}
+
+.team-member .member .role {
+    color: blue;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.team-member .member p {
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    margin: 12px 0;
+}
+
+.member .mem-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgb(57, 57, 197);
+}
+
+.member .mem-img img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding: 5px;
+
+}
+
+.carrer {
+    position: relative;
+    background: url('../Image/carrer.webp');
+    background-repeat: no-repeat;
+    height: 60vh;
+    width: 100%;
+    background-position: right;
+}
+
+.carrer a {
+    text-decoration: none;
+    color: #2e2e;
+    font-size: 20px;
+    position: absolute;
+    left: 7%;
+    bottom: 10%;
+}
+
+.carrer-text {
+    position: absolute;
+    width: 40%;
+    left: 5%;
+    top: 0;
+    text-align: justify;
+    padding: 20px;
+}
+
+.carrer h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #2e2e;
+    padding-bottom: 10px;
+}
+
+.carrer h3 {
+    font-size: 20px;
+    color: #fff;
+    padding-bottom: 20px;
+
+}
+
+.carrer p {
+    color: #fff;
+    font-size: 18px;
+}
+
+.setup {
+    background: url('../Image/setup.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+    position: relative;
+    margin-top: 10px;
+}
+
+.setup-text {
+    width: 60%;
+    position: absolute;
+    left: 23%;
+    top: 1%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+}
+
+.setup h1 {
+    font-size: 40px;
+    padding: 20px;
+    color: #2e2e;
+}
+
+.setup p {
+    font-size: 18px;
+    line-height: 25px;
+    color: #2e2e;
+}
+
+footer {
+    width: 100%;
+    bottom: 0;
+    background: linear-gradient(to left, #0008, #008);
+    color: #fff;
+    border-top-left-radius: 125px;
+    font-size: 13px;
+    padding: 20px;
+    border: 1px solid #2e2e;
+
+}
+
+.foot-row {
+    width: 85%;
+    margin: auto;
+    line-height: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.foot-col h3 {
+    width: fit-content;
+    position: relative;
+}
+
+.email-id {
+    width: fit-content;
+    border-bottom: 1px solid #2e2e;
+
+}
+
+.foot-col2 h3 {
+    width: fit-content;
+    position: relative;
+}
+
+.foot-col2 p a {
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+}
+
+.foot-col2 p a:hover {
+    color: #2e2e;
+    text-decoration: underline;
+}
+
+.foot-col3 form {
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #2e2e;
+    margin-bottom: 15px;
+}
+
+.foot-col3 form .far {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.foot-col3 form input {
+    width: 100%;
+    background: transparent;
+    color: #ccc;
+    border: 0;
+    outline: none;
+}
+
+.foot-col3 form button {
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.foot-col3 form button .fas {
+    font-size: 16px;
+    color: #ccc;
+}
+
+.social-icons .fab {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: blue;
+    background: #2e2e;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.copyright {
+    text-align: center;
+}
+
+#bottom-hr {
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #2e2e;
+    margin: 20px auto;
+}
+
+.underline-eff {
+    width: 100%;
+    height: 7px;
+    background: #000;
+    border-radius: 3px;
+    position: absolute;
+    border: 1px solid #2e2e;
+    top: 25px;
+    left: 0;
+    overflow: hidden;
+}
+
+.foot-col3 {
+    line-height: 50px;
+}
+
+.underline-eff span {
+    width: 15px;
+    height: 100%;
+    background: #2e2e;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+}
+
+@keyframes moving {
+    0% {
+        left: -20px;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+@media(max-width:800px) {
+    .logo {
+        font-size: 25px;
+    }
+
+    .searchBtn {
+        left: 50px;
+        top: 5px;
+    }
+
+    .menuToggle {
+        position: relative;
+        display: block;
+        font-size: 2.3em;
+        cursor: pointer;
+        transform: translateX(30px);
+        z-index: 10;
+    }
+
+
+    header .navigation {
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        left: 100%;
+    }
+
+    header.open .navigation {
+        top: 80px;
+        opacity: 1;
+        visibility: visible;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        height: calc(100vh - 80px);
+        padding: 40px;
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    header.open .navigation li a {
+        font-size: 1.25em;
+    }
+
+    .head-text {
+        font-size: 10px;
+        font-weight: 400;
+        height: 30px;
+        margin-top: 150px;
+    }
+
+    .about-phx {
+        padding: 30px;
+    }
+
+    .about-phx h1 {
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    .about-phx h3 {
+        padding-top: 10px;
+        font-size: 13px;
+        line-height: 10px;
+    }
+
+    .about-phx p {
+        padding-top: 15px;
+        font-size: 10px;
+        color: #666;
+        line-height: 10px;
+    }
+
+    .razer-about {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .razer-about img {
+        width: 100%;
+    }
+
+    .razer-about-text {
+        font-size: 13px;
+        color: #666;
+        line-height: 10px;
+        text-align: justify;
+        border: 1px dotted #2e2e;
+        padding: 10px;
+    }
+
+    .razer-about-text p {
+        line-height: 15px;
+    }
+
+    .msi-about {
+        position: relative;
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    .msi-about img {
+        width: 100%;
+    }
+
+    .msi-ab-buy {
+        position: absolute;
+        top: 33%;
+        left: 15%;
+        text-decoration: none;
+        background: #2e2e;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 10px;
+        padding: 5px;
+    }
+    .accolades {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .acc-head h1 {
+        color: #2e2e;
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .acc1 .acc1-img {
+        width: 300px;
+    }
+
+    .acc1 .acc1-img img {
+        width: 100%;
+    }
+
+    .acc1-text {
+        color: #8b8b8b;
+        width: 300px;
+        text-align: justify;
+        font-size: 13px;
+        line-height: 20px;
+    }
+    .team h1 {
+        font-size: 25px;
+    }
+    .team-member .member h3 {
+        font-size: 20px;
+    }
+    
+    .team-member .member .role {
+        font-size: 15px;
+        font-weight: 800;
+    }
+    
+    .team-member .member p {
+        font-weight: 400;
+        font-size: 13px;
+    }
+    .member .mem-img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .member .mem-img img {
+        width: 80px;
+        height: 80px;
+    }
+    .setup-text {
+        width: 80%;
+        position: absolute;
+        left: 15%;
+        top: 8%;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 10px;
+    }
+    
+    .setup h1 {
+        font-size: 16px;
+        padding: 10px;
+        color: #2e2e;
+    }
+    
+    .setup p {
+        font-size: 13px;
+        line-height: 18px;
+        color: #2e2e;
+    }
+
+    .carrer {
+        height: 50vh;
+        background-position: center;
+    }
+    
+    .carrer a {
+        font-size: 18px;
+        left: 10%;
+    }
+    
+    .carrer-text {
+        width: 70%;
+    }
+    
+    .carrer h1 {
+        font-size: 25px;
+    }
+    
+    .carrer h3 {
+        font-size: 15px;
+        padding-bottom: 10px;
+    
+    }
+    
+    .carrer p {
+        font-size: 13px;
+    }
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 255, 0);
+    box-shadow: inset 0 0 5px rgb(26, 255, 0);
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(255, 0, 0);
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2e2e;
+  }

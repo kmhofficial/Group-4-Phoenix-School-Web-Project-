@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+    .gamedetail {
+        display: block;
+    }
+
+    .main-img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+body {
+    background-color: #1B2838;
+}
+
+.main-page {
+    width: 80%;
+    margin: auto;
+}
+h1{
+    margin-bottom: 15px;
+}
+h1,
+h5 {
+    color: white;
+}
+h5{
+    font-size: 20px;
+}
+
+@media only screen and (min-width: 1000px) {
+    .webmimg{
+        width: 50%;
+        height: auto;
+    }
+    .gamedetail {
+        display: flex;
+    }
+
+    .about_game {
+        width: 600px;
+    }
+}
+.requirement {
+    display: flex;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.gamedetail img {
+    width: 26px;
+    height: 19px;
+    background-color: #121923;
+}
+span{
+    color: white;
+}
+.game_class_type {
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+
+}
+.game_class_type div{
+    display: flex;
+    margin-top: 5px;
+}
+.game_type {
+    color: #4295A3;
+    cursor: pointer;
+    display: inline-block;
+    width: 150px;
+    background-color: #ffffff;
+}
+
+.game_type:hover {
+    background-color: lightblue;
+    color: white;
+}
+
+.requirement h5 {
+    color: grey;
+}
+
+.requirement span {
+    font-size: 13px;
+}
+
+.requirement .requirement_detail {
+    color: grey;
+}
+
+.about_game {
+    color: #ABABB7;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+#product-box .product__title,#product-box .card__image,#product-box .card__title,#product-box .card__text,#product-box .product__price{
+    display: none;
+  }
+
+  .buy-btn{
+    background: green;
+      color: white;
+      border-radius: 10px;
+      padding: 10px 25px 10px 25px;
+      border: none;
+  }
+  .buy-btn:hover {
+    background-color: rgb(110, 172, 17);
+  }
+  #cart-box{
+    display: none;
+  }
+  #shopping-cart{
+    display: none;
+  }

@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background: url('https://wallpaper-house.com/data/out/12/wallpaper2you_521443.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.detail-item {
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    color: #2e2e;
+    width: 100%;
+    height: fit-content;
+}
+
+#td-sec {
+    font-size: 15px;
+    color: #fff;
+}
+
+@media (min-width: 320px) and (max-width: 500px) {
+    .detail-item {
+        text-align: center;
+        font-size: 10px;
+    }
+
+    .de-table tr {
+        border: 2px solid #fff;
+        border-collapse: collapse;
+        width: 100%;
+        height: 50px;
+        font-size: 15px;
+    }
+
+    #td-sec {
+        font-size: 15px;
+        color: #fff;
+        padding-left: 5px;
+    }
+
+}
+
+.item-img {
+    display: block;
+    align-items: center;
+}
+
+.item-img img {
+    margin-top: 20px;
+    width: 250px;
+    height: 190px;
+    margin-bottom: 10px;
+}
+
+.item-specs {
+    display: block;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.de-table {
+
+    border-collapse: collapse;
+    width: 90%;
+    margin: auto;
+    text-align: justify;
+    padding-left: 50px;
+}
+
+.de-table tr {
+    border-bottom: 1px solid #fff;
+    border-collapse: collapse;
+    width: 100%;
+    height: 100px;
+    padding-left: 20px;
+}
+
+.de-table tr td {
+
+    border-collapse: collapse;
+    width: 50%;
+    color: #2e2e;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding-left: 20px;
+}
+
+@media (min-width: 820px) {
+    .de-table {
+        border-bottom: 1px solid #2e2e;
+        border-collapse: collapse;
+        width: 650px;
+        margin: auto;
+    }
+}
+
+.detail-shop {
+    width: 120px;
+    background: #fff;
+    text-decoration: none;
+    padding: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    box-shadow: 2px 1px 1px #2e2e;
+    color: #000;
+    border: 1px solid #2e2e;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: -60px;
+    text-transform: uppercase;
+}
+
+.detail-shop:hover {
+    background-color: #2e2e;
+    color: #fff;
+}
